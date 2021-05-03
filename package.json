@@ -1,0 +1,39 @@
+{
+  "name": "udacity-project",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "latest",
+    "@fortawesome/free-brands-svg-icons": "latest",
+    "@fortawesome/free-regular-svg-icons": "latest",
+    "@fortawesome/free-solid-svg-icons": "latest",
+    "@fortawesome/react-fontawesome": "latest",
+    "form-serialize": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-redux": "latest",
+    "react-router-dom": "latest",
+    "react-scripts": "latest",
+    "redux": "latest",
+    "redux-thunk": "latest",
+    "styled-components": "latest"
+  },
+  "devDependencies": {
+    "@babel/runtime": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
