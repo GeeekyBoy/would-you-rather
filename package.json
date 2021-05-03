@@ -1,13 +1,11 @@
 {
-  "name": "udacity-project",
+  "name": "would-you-rather",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just a voting system ;)",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "latest",
-    "@fortawesome/free-brands-svg-icons": "latest",
-    "@fortawesome/free-regular-svg-icons": "latest",
     "@fortawesome/free-solid-svg-icons": "latest",
     "@fortawesome/react-fontawesome": "latest",
     "form-serialize": "latest",

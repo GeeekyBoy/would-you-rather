@@ -18,7 +18,7 @@ const Login = (props) => {
   const [ selectedUser, setSelectedUser ] = useState(null)
   const handleSelectChange = (e) => setSelectedUser(e.target.value)
   const handleSignIn = () => {
-    if (selectedUser) {
+    if (selectedUser !== "_dump") {
       dispatch(logIn(selectedUser))
     }
   }
@@ -30,9 +30,9 @@ const Login = (props) => {
           <span>Please signin to continue</span>
         </div>
         <FontAwesomeIcon size="8x" color="#FF0266" icon={faUserLock} />
-        <select onChange={handleSelectChange}>
-          {!users && <option value="" disabled selected>Fetching</option>}
-          {users && <option value="" disabled selected>Please select a user</option>}
+        <select onChange={handleSelectChange} defaultValue="_dump">
+          {!users && <option value="_dump" disabled>Fetching</option>}
+          {users && <option value="_dump" disabled>Please select a user</option>}
           {users && Object.values(users).map(x => (
             <option key={x.id} value={x.id}>{x.name}</option>
           ))}
