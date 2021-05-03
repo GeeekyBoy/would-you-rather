@@ -22,6 +22,7 @@ const Home = (props) => {
             .filter((x) => activeTab === 1 ? 
                            Object.keys(users[currentUser].answers).includes(x.id) :
                            !Object.keys(users[currentUser].answers).includes(x.id))
+            .sort((a, b) => (b.timestamp - a.timestamp))
             .map((x) => (
               <QuestionCard key={x.id}>
                 <img src={users[x.author].avatarURL} alt={users[x.author].name} />

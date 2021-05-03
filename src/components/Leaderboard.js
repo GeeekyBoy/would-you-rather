@@ -6,7 +6,7 @@ const Leaderboard = (props) => {
   return (
     <AchievemensContainer>
       {Object.values(users).sort((a, b) => (
-        (Object.keys(a.answers).length + a.questions.length) - (Object.keys(b.answers).length + b.questions.length)
+        (Object.keys(b.answers).length + b.questions.length) - (Object.keys(a.answers).length + a.questions.length)
         )).map((x, i) => (
           <AchievementCard key={x.id}>
             <img src={x.avatarURL} alt={x.name} />

@@ -10,7 +10,7 @@ import Loading from "./Loading";
 import { logOut } from "../actions/currentUser";
 import { handleRetrieveQuestions } from "../actions/questions";
 import { handleRetrieveUsers } from "../actions/users";
-import { setLoginReferrer } from "../actions/status"
+import { setLoginReferrer, addQuestionStatus } from "../actions/status"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink, Route, Redirect, useRouteMatch, useHistory } from "react-router-dom";
@@ -29,6 +29,12 @@ const App = (props) => {
     if (currentUser) {
       if (status.referrer) {
         dispatch(setLoginReferrer(null))
+      }
+      if (status.addingQuestion === "OK") {
+        if (isFABActive) {
+          history.push("/")
+        }
+        dispatch(addQuestionStatus(null))
       }
       if (!users) {
         dispatch(handleRetrieveUsers())

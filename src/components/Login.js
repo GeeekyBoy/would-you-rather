@@ -31,8 +31,8 @@ const Login = (props) => {
         </div>
         <FontAwesomeIcon size="8x" color="#FF0266" icon={faUserLock} />
         <select onChange={handleSelectChange} defaultValue="_dump">
-          {!users && <option value="_dump" disabled selected>Fetching</option>}
-          {users && <option value="_dump" disabled selected>Please select a user</option>}
+          {!users && <option value="_dump">Fetching</option>}
+          {users && <option value="_dump">Please select a user</option>}
           {users && Object.values(users).map(x => (
             <option key={x.id} value={x.id}>{x.name}</option>
           ))}
